@@ -1,0 +1,47 @@
+.card {
+  display: grid;
+  gap: 1rem;
+  padding: 2.25rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(6, 33, 57, 0.08);
+  box-shadow: 0 22px 40px -36px rgba(6, 33, 57, 0.55);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 60px -38px rgba(6, 33, 57, 0.6);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(17, 160, 164, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-teal);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.more {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-teal);
+  font-weight: 600;
+}

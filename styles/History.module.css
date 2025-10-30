@@ -1,0 +1,46 @@
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.heroStat {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroStat strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 0.35rem;
+}
+
+.ctaSection {
+  padding: 5rem 0;
+}
+
+.ctaCard {
+  background: var(--color-light);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(6, 33, 57, 0.08);
+  box-shadow: 0 28px 60px -45px rgba(6, 33, 57, 0.45);
+}
+
+.ctaCard a {
+  justify-self: center;
+}
+
+@media (max-width: 720px) {
+  .heroStats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,87 @@
+.section {
+  background: var(--color-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.reasons {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.reasonCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(6, 33, 57, 0.08);
+  box-shadow: 0 20px 45px -36px rgba(6, 33, 57, 0.4);
+}
+
+.reasonIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(33, 181, 115, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-green);
+}
+
+.reasonCard h3 {
+  margin: 0;
+}
+
+.reasonCard p {
+  margin: 0.3rem 0 0;
+}
+
+.highlightCard {
+  background: var(--color-navy);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: 0 28px 60px -45px rgba(6, 33, 57, 0.6);
+}
+
+.highlightCard h3 {
+  color: #fff;
+}
+
+.highlightCard ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.highlightCard li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.highlightCard li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

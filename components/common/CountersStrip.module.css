@@ -1,0 +1,59 @@
+.strip {
+  background: linear-gradient(120deg, rgba(6, 33, 57, 0.97), rgba(6, 33, 57, 0.78));
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.head h3 {
+  margin: 0.6rem 0;
+  color: #fff;
+}
+
+.head p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.metric {
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}

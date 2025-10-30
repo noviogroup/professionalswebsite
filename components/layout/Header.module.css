@@ -1,0 +1,94 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(6, 33, 57, 0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 1.4rem 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brandMark {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-navy);
+}
+
+.brandSub {
+  font-size: 0.8rem;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+  font-weight: 600;
+  color: rgba(6, 33, 57, 0.65);
+  transition: color 0.3s ease;
+  padding-bottom: 0.2rem;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--color-teal);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover,
+.active {
+  color: var(--color-navy);
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .inner {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    width: 100%;
+    order: 3;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

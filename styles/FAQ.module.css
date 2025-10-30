@@ -1,0 +1,26 @@
+.intro {
+  padding: 4rem 0;
+  background: var(--color-light);
+}
+
+.introContent {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.additional {
+  padding: 5rem 0;
+}
+
+.additional h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.additionalContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
