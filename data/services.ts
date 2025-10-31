@@ -22,7 +22,7 @@ export const coreServices: Service[] = [
   {
     title: "Business Planning",
     description: "Build data-driven plans aligned with objectives, budgets and stakeholder expectations.",
-    icon: "🗂️"
+    icon: "🗂"
   },
   {
     title: "Financial Planning",
