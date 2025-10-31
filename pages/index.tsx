@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroBanner from "@/components/common/HeroBanner";
 import SectionHeading from "@/components/common/SectionHeading";
 import CountersStrip from "@/components/common/CountersStrip";
@@ -17,74 +18,74 @@ import heroStyles from "@/styles/HomeHero.module.css";
 
 const heroHighlights = [
   {
-    icon: "📸",
-    label: "Trusted Insight"
+    icon: "",
+    label: "40+ Years Serving Members"
   },
   {
-    icon: "📈",
-    label: "Proven Success"
+    icon: "",
+    label: "Competitive Rates"
   },
   {
-    icon: "🛠️",
-    label: "Ongoing Support"
+    icon: "",
+    label: "Community Focused"
   }
 ];
 
 const strategyPoints = [
-  "Diagnose financial blind spots with precision",
-  "Deliver actionable plans for every stage of your growth",
-  "Implement technology that increases visibility and control"
+  "Low-interest loans tailored to your needs",
+  "High-yield savings accounts to grow your wealth",
+  "Dedicated support from a team that understands law enforcement"
 ];
 
 const reasons = [
   {
-    title: "Business Growth",
-    description: "Unlock performance with tailored growth blueprints.",
-    icon: "🚀"
+    title: "Low-Rate Loans",
+    description: "Consumer, vehicle, property, and education loans with competitive rates.",
+    icon: ""
   },
   {
-    title: "Capital Markets",
-    description: "Navigate listings, raises and investor reporting with ease.",
-    icon: "💼"
+    title: "High-Yield Savings",
+    description: "Grow your wealth with savings accounts and fixed deposits.",
+    icon: ""
   },
   {
-    title: "Business Planning",
-    description: "Translate strategy into measurable execution plans.",
-    icon: "🗓️"
+    title: "Member-Owned",
+    description: "As a cooperative, profits go back to members through better rates.",
+    icon: ""
   },
   {
-    title: "Financial Planning",
-    description: "Model cash flow scenarios and protect profitability.",
-    icon: "📊"
+    title: "Fast Approvals",
+    description: "Quick loan processing to meet your urgent financial needs.",
+    icon: ""
   },
   {
-    title: "Taxes Planning",
-    description: "Reduce liabilities while staying compliant globally.",
-    icon: "🧾"
+    title: "Financial Education",
+    description: "Free counseling and resources to help you make informed decisions.",
+    icon: ""
   }
 ];
 
 const highlights = [
-  "Social security & pension optimization",
-  "GST / TDS / income tax filings",
-  "Tax deductions & exemptions guidance"
+  "Personalized loan options for every need",
+  "No hidden fees or surprise charges",
+  "Local decision-making by people who know you"
 ];
 
 const trioItems = [
   {
-    title: "Market Research",
-    description: "Gain strategic advantage with data-backed market intelligence.",
-    imageUrl: "https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=1200&q=80"
+    title: "Consumer Loans",
+    description: "Personal loans for any purpose with flexible repayment terms.",
+    imageUrl: "https://images.pexels.com/photos/4968382/pexels-photo-4968382.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80"
   },
   {
-    title: "Risk Management",
-    description: "Identify, assess and mitigate financial and operational risks.",
-    imageUrl: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+    title: "Vehicle Financing",
+    description: "Get behind the wheel with affordable auto loans.",
+    imageUrl: "https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80"
   },
   {
-    title: "Tax Preparation",
-    description: "Prepare precise filings and stay ahead of evolving regulations.",
-    imageUrl: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80&sat=-20"
+    title: "Savings Plans",
+    description: "Build your future with competitive savings rates and fixed deposits.",
+    imageUrl: "https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80"
   }
 ];
 
@@ -92,28 +93,28 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Gudfin Advisory | Financial Strategy & Consulting</title>
+        <title>BLECCU | Bahamas Law Enforcement Co-operative Credit Union</title>
         <meta
           name="description"
-          content="Gudfin Advisory empowers organisations with data-driven financial strategy, tax planning, compliance and advisory services."
+          content="Serving Bahamas law enforcement professionals since 1985 with trusted financial services including loans, savings, and member benefits."
         />
       </Head>
 
       <HeroBanner
-        eyebrow="YOUR GROWTH, OUR EXPERTISE"
+        eyebrow="SERVING LAW ENFORCEMENT SINCE 1985"
         title={
           <>
-            Investment that moves <span className={heroStyles.headlineHighlight}>business</span> forward.
+            Your financial partner for <span className={heroStyles.headlineHighlight}>growth</span> and <span className={heroStyles.headlineHighlight}>security</span>.
           </>
         }
-        description="We partner with ambitious teams to modernise accounting, optimise tax positions and unlock new revenue opportunities."
-        backgroundImage="https://images.unsplash.com/premium_photo-1682146213935-13568cdc6d55?auto=format&fit=crop&w=1800&q=80"
+        description="BLECCU provides affordable loans, competitive savings rates, and dedicated member support to Bahamas law enforcement professionals."
+        backgroundImage="https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=1800&q=80"
       >
         <div>
-          <a href="/about" className={heroStyles.heroButton}>
-            Discover More
+          <Link href="/membership" className={heroStyles.heroButton}>
+            Join BLECCU
             <span>→</span>
-          </a>
+          </Link>
         </div>
         <div className={heroStyles.heroHighlights}>
           {heroHighlights.map((item) => (
@@ -128,9 +129,9 @@ export default function HomePage() {
       <section className="section">
         <div className="container" style={{ display: "grid", gap: "2rem" }}>
           <SectionHeading
-            eyebrow="Strategies"
-            title="Top strategies for achieving sustainable business"
-            description="We align capital, operations and technology to help small businesses thrive in dynamic markets."
+            eyebrow="Our Commitment"
+            title="Financial services designed for law enforcement"
+            description="As a member-owned credit union, we prioritize your financial well-being with personalized service and competitive rates."
             align="left"
           />
           <ul style={{ margin: 0, paddingLeft: "1.3rem", color: "var(--color-muted)", display: "grid", gap: "0.75rem" }}>
@@ -139,56 +140,56 @@ export default function HomePage() {
             ))}
           </ul>
           <div>
-            <a href="/contact" className="btn">
-              Let&apos;s Start
-            </a>
+            <Link href="/membership" className="btn">
+              Become a Member
+            </Link>
           </div>
         </div>
       </section>
 
       <CountersStrip
-        eyebrow="Performance Insights"
-        title="We’re driving results for fast-growing businesses."
-        description="Quantifiable outcomes backed by proven methodologies and accountable teams."
+        eyebrow="Our Impact"
+        title="Trusted by Bahamas law enforcement community"
+        description="Four decades of reliable service to those who serve and protect our communities."
         metrics={[
-          { label: "Years of Working Experience", value: 18, suffix: "+" },
-          { label: "Customers Worldwide", value: 20000, suffix: "+" },
-          { label: "Financial Solutions Implemented", value: 320, suffix: "+" },
-          { label: "Projects Delivered", value: 56, suffix: "+" }
+          { label: "Years of Service", value: 40, suffix: "+" },
+          { label: "Active Members", value: 1500, suffix: "+" },
+          { label: "Loans Approved", value: 5000, suffix: "+" },
+          { label: "Community Partners", value: 8, suffix: "" }
         ]}
       />
 
-      <ServicesShowcase imageUrl="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" />
+      <ServicesShowcase imageUrl="https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" />
 
       <WhyChooseUs reasons={reasons} highlights={highlights} />
 
       <ImageTrio
-        eyebrow="Insights"
-        title="Build insight that fuels advantage"
-        subtitle="Our analysts deliver the research and risk modelling you need to stay ahead."
+        eyebrow="Our Services"
+        title="Financial products designed for you"
+        subtitle="Explore our full range of loans, savings, and member benefits."
         items={trioItems}
       />
 
-      <ProcessSteps steps={financialProcess} title="Successful financial control process" eyebrow="Process" />
+      <ProcessSteps steps={financialProcess} title="Simple membership process" eyebrow="How It Works" />
 
       <TeamGrid
         members={teamMembers}
-        title="Our nearly 350+ expert team members are ready to help now."
-        subtitle="Meet the advisors guiding leading brands with clarity and conviction."
-        actionLabel="See All Advisor"
-        actionHref="/about#team"
+        title="Meet the dedicated team serving our members"
+        subtitle="Our board, committees, and staff are committed to your financial success."
+        actionLabel="View Full Team"
+        actionHref="/about"
       />
 
       <TestimonialsCarousel
         testimonials={testimonials}
-        title="What our clients say about working with Gudfin."
-        subtitle="We’ve delivered 56+ projects that help companies generate real results."
-        ratingLabel="★ 4.9/5"
+        title="What our members say about BLECCU"
+        subtitle="Trusted by law enforcement professionals across the Bahamas."
+        ratingLabel="★ 4.8/5"
       />
 
       <PartnerLogos
-        title="Trusted by 50+ businesses"
-        subtitle="Customer satisfaction 95%+ empowering 50+ brands worldwide."
+        title="Proudly serving Bahamas law enforcement agencies"
+        subtitle="Partner organizations include RBPF, RBDF, Correctional Services, Immigration, Customs, and more."
         logos={partnerLogos}
       />
     </>

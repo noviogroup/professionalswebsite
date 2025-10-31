@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroBanner from "@/components/common/HeroBanner";
 import SectionHeading from "@/components/common/SectionHeading";
 import ProcessSteps from "@/components/common/ProcessSteps";
@@ -11,19 +12,19 @@ import styles from "@/styles/About.module.css";
 
 const missionCards = [
   {
-    icon: "💼",
-    title: "Payroll processing services",
-    description: "End-to-end payroll, compliance and reporting managed by specialists."
+    icon: "",
+    title: "Member-Owned",
+    description: "As a cooperative, we're owned by our members and operate for their benefit."
   },
   {
-    icon: "🏆",
-    title: "Expertise you can trust",
-    description: "Advisors with deep experience across accounting, tax and global operations."
+    icon: "",
+    title: "Community Focused",
+    description: "Serving Bahamas law enforcement professionals and their families since 1985."
   },
   {
-    icon: "📊",
-    title: "Business financial planning",
-    description: "Scenario planning that aligns cash flow, investment and growth targets."
+    icon: "",
+    title: "Financial Strength",
+    description: "Four decades of stable growth and reliable service to our community."
   }
 ];
 
@@ -31,27 +32,27 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Gudfin Advisory | Experienced Financial Consultants</title>
+        <title>About Us | BLECCU - Bahamas Law Enforcement Credit Union</title>
         <meta
           name="description"
-          content="Since 1998, Gudfin Advisory has delivered exceptional accounting, taxation and payroll processing services for growth-focused businesses."
+          content="Since 1985, BLECCU has served Bahamas law enforcement professionals with trusted financial services and member benefits."
         />
       </Head>
 
       <HeroBanner
-        eyebrow="About Us"
-        title="With years of experience and a results-focused approach, we empower businesses to navigate complexity and achieve their goals."
-        description="Our advisory practice blends global reach with local insight so you can seize opportunities, reduce risk and scale with confidence."
-        backgroundImage="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
-        actions={[{ label: "Discover More", href: "/services", variant: "primary" }]}
+        eyebrow="About BLECCU"
+        title="Serving those who serve and protect our communities"
+        description="For over 40 years, the Bahamas Law Enforcement Co-operative Credit Union has been the trusted financial partner for law enforcement professionals across the Bahamas."
+        backgroundImage="https://images.pexels.com/photos/8761660/pexels-photo-8761660.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80"
+        actions={[{ label: "Become a Member", href: "/membership", variant: "primary" }]}
       />
 
       <section className={styles.missionSection}>
         <div className="container">
           <SectionHeading
             eyebrow="Our Mission"
-            title="With a global reach, our firm has been in business since 1998."
-            description="We provide exceptional accounting, taxation and payroll processing services delivered by agile teams and advanced technology."
+            title="Established in 1985 to serve law enforcement"
+            description="BLECCU provides affordable financial services with personalized attention and competitive rates to those who protect our communities."
           />
           <div className={styles.missionGrid}>
             {missionCards.map((card) => (
@@ -64,53 +65,51 @@ export default function AboutPage() {
           </div>
           <div className={styles.missionDetails}>
             <p>
-              We believe every business deserves transparent insight and proactive partnership. Our methodology combines data,
-              automation and human expertise to deliver measurable outcomes across accounting, tax and financial planning.
+              BLECCU was founded by and for law enforcement professionals who wanted better financial services. Today, we continue that mission with member-focused products, competitive rates, and personalized service that recognizes the unique needs of those who serve our communities.
             </p>
             <div>
-              <h3>Where we make the difference</h3>
+              <h3>What sets us apart</h3>
               <ul>
-                <li>Tax relief and refund claims handled end-to-end</li>
-                <li>Support for first-time filers with guided onboarding</li>
-                <li>Solutions for couriers, riders and drivers with unique needs</li>
+                <li>Member-owned cooperative putting your interests first</li>
+                <li>Competitive loan rates and high-yield savings products</li>
+                <li>Dedicated service from staff who understand law enforcement</li>
               </ul>
             </div>
             <div>
-              <a href="/contact" className="btn">
-                Discover More
-              </a>
+              <Link href="/membership" className="btn">
+                Join BLECCU Today
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <ProcessSteps steps={financialProcess} title="Successful financial control process" eyebrow="Process" />
+      <ProcessSteps steps={financialProcess} title="Our journey: 40+ years of service" eyebrow="History" />
 
       <section className={styles.blockquoteSection}>
         <div className="container">
           <div className={styles.blockquote}>
-            <span className="tagline">Client Stories</span>
-            <h2>The team is professional, transparent, and always available to answer my questions.</h2>
+            <span className="tagline">Member Testimonials</span>
+            <h2>BLECCU has been my financial partner for over 15 years.</h2>
             <p>
-              “They truly care about my financial success. From compliance to strategic planning, Gudfin Advisory continues to
-              deliver beyond expectations.”
+              &quot;From my first vehicle loan to saving for my children&apos;s education, BLECCU has always been there with competitive rates and genuine care. They understand the challenges law enforcement professionals face.&quot;
             </p>
-            <strong>Stephen Welch — Managing Director, Summit Partners</strong>
+            <strong>Officer J. Thompson — Royal Bahamas Police Force</strong>
           </div>
         </div>
       </section>
 
       <PartnerLogos
-        title="Join the 14k+ businesses using Gudfin"
-        subtitle="Trusted by companies worldwide to streamline financial operations and compliance."
+        title="Proudly serving Bahamas law enforcement"
+        subtitle="Trusted partner to RBPF, RBDF, Correctional Services, Immigration, Customs, and related agencies."
         logos={partnerLogos}
       />
 
       <TeamGrid
         members={teamMembers}
-        title="Our nearly 350+ expert team members are ready to help now."
-        subtitle="Contact us to connect with the specialists who will guide your next chapter."
-        actionLabel="Contact Us Now"
+        title="Meet our board, committees, and staff"
+        subtitle="Dedicated professionals committed to serving BLECCU members with excellence."
+        actionLabel="Contact Us"
         actionHref="/contact"
       />
     </>

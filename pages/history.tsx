@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import HeroBanner from "@/components/common/HeroBanner";
 import Timeline from "@/components/history/Timeline";
 import { companyTimeline } from "@/data/timeline";
@@ -49,9 +50,9 @@ export default function HistoryPage() {
               Schedule an appointment with our advisors to evaluate your goals, design tailored strategies and activate your next
               wave of transformation.
             </p>
-            <a href="/contact" className="btn btn-teal">
+            <Link href="/contact" className="btn btn-teal">
               Schedule an Appointment
-            </a>
+            </Link>
           </div>
         </div>
       </section>
